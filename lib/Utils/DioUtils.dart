@@ -73,14 +73,14 @@ class DioUtils {
       String api, String method, Map<String, dynamic> data, String response) {
     print("URL $method:\t" + _dio.options.baseUrl + api);
     print("param:\t" + data.toString());
-    print("response:\n");
-    int maxLoop = response.length ~/ 200 + (response.length % 200 == 0 ? 0 : 1);
-    for (int i = 0; i < maxLoop; i++) {
-      if (i == (maxLoop - 1))
-        print(response.substring(i * 200));
-      else
-        print(response.substring(i * 200, i * 200 + 200));
-    }
+//    print("response:\n");
+//    int maxLoop = response.length ~/ 200 + (response.length % 200 == 0 ? 0 : 1);
+//    for (int i = 0; i < maxLoop; i++) {
+//      if (i == (maxLoop - 1))
+//        print(response.substring(i * 200));
+//      else
+//        print(response.substring(i * 200, i * 200 + 200));
+//    }
   }
 
   //单例模式

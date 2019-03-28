@@ -21,5 +21,7 @@ const API={
   //获取火爆专区的信息
   'homePageBelow':'/wxmini/homePageBelowConten',
   //获取分类
-  'category':'/wxmini/getCategory'
+  'category':'/wxmini/getCategory',
+  //获取分类商品
+  'categoryGoods':'/wxmini/getMallGoods',
 };
