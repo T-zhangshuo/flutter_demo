@@ -7,7 +7,6 @@ import 'package:flutter_demo/Net/NetConfig.dart';
 
 //Dio 网络请求库封装，单例模式
 class DioUtils {
-  BuildContext context;
   Dio _dio = null;
 
   void _initHttp() {
@@ -86,7 +85,7 @@ class DioUtils {
   }
 
   //单例模式
-  factory DioUtils(BuildContext context) => getHttp(context);
+  factory DioUtils() => getHttp();
   static DioUtils _http;
 
   DioUtils._internal() {
@@ -94,11 +93,10 @@ class DioUtils {
     _initHttp();
   }
 
-  static DioUtils getHttp(BuildContext context) {
+  static DioUtils getHttp() {
     if (_http == null) {
       _http = new DioUtils._internal();
     }
-    _http.context = context;
     return _http;
   }
 }

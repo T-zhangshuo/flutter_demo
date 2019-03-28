@@ -17,5 +17,7 @@ const String HTTP_RECEIVE_TYPE="JSON";
 //API 列表
 const API={
   //商家首页信息
-  "homePageContent":'/wxmini/homePageContent'
+  "homePageContent":'/wxmini/homePageContent',
+  //获取火爆专区的信息
+  'homePageBelow':'/wxmini/homePageBelowConten'
 };

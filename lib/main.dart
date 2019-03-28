@@ -20,6 +20,6 @@ class MainApp extends StatelessWidget {
   }
 
   _initApp(BuildContext context){
-    new DioUtils(context);
+    new DioUtils();
   }
 }
