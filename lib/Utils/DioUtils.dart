@@ -1,13 +1,12 @@
 import 'dart:io';
 import 'dart:convert' show json;
 
-import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_demo/Net/NetConfig.dart';
 
 //Dio 网络请求库封装，单例模式
 class DioUtils {
-  Dio _dio = null;
+  Dio _dio;
 
   void _initHttp() {
     _dio = Dio();

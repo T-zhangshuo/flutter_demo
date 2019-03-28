@@ -19,5 +19,7 @@ const API={
   //商家首页信息
   "homePageContent":'/wxmini/homePageContent',
   //获取火爆专区的信息
-  'homePageBelow':'/wxmini/homePageBelowConten'
+  'homePageBelow':'/wxmini/homePageBelowConten',
+  //获取分类
+  'category':'/wxmini/getCategory'
 };

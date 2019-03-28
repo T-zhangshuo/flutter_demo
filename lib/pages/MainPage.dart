@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'BasePage.dart';
 import 'HomePage.dart';
-import 'TypePage.dart';
+import 'CategoryPage.dart';
 import 'ShoppingCartPage.dart';
 import 'MinePage.dart';
 
@@ -34,7 +34,7 @@ class MainPage extends BasePage {
     _pageController = PageController();
     _pageList
       ..add(HomePage())
-      ..add(TypePage())
+      ..add(CategoryPage())
       ..add(ShoppingCartPage())
       ..add(MinePage());
   }

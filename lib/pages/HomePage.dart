@@ -10,6 +10,7 @@ class HomePage extends BasePage {
   List<Map> _hotGoodsList = List();
   GlobalKey<EasyRefreshState> _easyRefreshKey =
       new GlobalKey<EasyRefreshState>();
+  GlobalKey<RefreshFooterState> _footerKey = new GlobalKey<RefreshFooterState>();
 
   @override
   void initData(BuildContext context) {
@@ -54,6 +55,16 @@ class HomePage extends BasePage {
           return EasyRefresh(
             key: _easyRefreshKey,
             loadMore: () => _getGoodsList(),
+            refreshFooter: ClassicsFooter(
+                key:_footerKey,
+                bgColor:Colors.white,
+                textColor: Colors.pink,
+                moreInfoColor: Colors.pink,
+                showMore: true,
+                noMoreText: '',
+                moreInfo: '加载中',
+                loadReadyText:'上拉加载....'
+            ),
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -157,6 +168,7 @@ class MenuGridView extends StatelessWidget {
     return Container(
       height: ScreenUtil.instance.setHeight(330),
       child: GridView.count(
+        physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 5,
         children: menuList.map((item) {
           return _gridViewItemUI(context, item);
