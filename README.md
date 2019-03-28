@@ -1,16 +1,14 @@
 # flutter_demo
 
-A new Flutter project.
+Flutter 学习的demo
 
-## Getting Started
+Constants中，包含了AppLibs.dart ，主要为第三必须库导出
 
-This project is a starting point for a Flutter application.
+Net中，包含了API相关的属性
 
-A few resources to get you started if this is your first Flutter project:
+pages 为基础页面，
+其中BasePage为基础Page页面，其他页面可以继承它进行页面的编写，后续会继续扩张该页面功能。
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+Utils中 DioUtils.dart封装了网络dio库。
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+widgets中包含共用的组件

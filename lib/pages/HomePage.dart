@@ -23,7 +23,11 @@ class HomePage extends BasePage {
           String adPicture = data['advertesPicture']['PICTURE_ADDRESS'];
           String shopInfo = data['shopInfo']['leaderImage'];
           String shopPhone = data['shopInfo']['leaderPhone'];
-          List<Map> recommendList=(data['recommend'] as List).cast();
+          List<Map> tmpList=(data['recommend'] as List).cast();
+          //模拟横行条滚动，多增加一组数据
+          List<Map> recommendList=List();
+          recommendList.addAll(tmpList);
+          recommendList.addAll(tmpList);
 
           return SingleChildScrollView(
             child: Column(
