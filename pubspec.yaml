@@ -21,6 +21,8 @@ dependencies:
   json_annotation: ^2.0.0
   # 状态管理库
   provide: ^1.0.2
+  # 权限
+  permission_handler: ^3.0.0
 
 dev_dependencies:
   flutter_test:

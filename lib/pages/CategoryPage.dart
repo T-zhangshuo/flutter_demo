@@ -139,11 +139,14 @@ class _RightTabNav extends State<RightTabNav> {
   Widget build(BuildContext context) {
     return Provide<SubCategoryProvide>(
       builder: (context, child, subCategoryProvide) {
-        if (subCategoryProvide.subCategoryList[0].mallCategoryId !=
-            categoryId) {
-          categoryId = subCategoryProvide.subCategoryList[0].mallCategoryId;
-          _selectIndex = 0;
-          widget.callBack(subCategoryProvide.subCategoryList[0]);
+        if (subCategoryProvide.subCategoryList != null &&
+            subCategoryProvide.subCategoryList.length > 0) {
+          if (subCategoryProvide.subCategoryList[0].mallCategoryId !=
+              categoryId) {
+            categoryId = subCategoryProvide.subCategoryList[0].mallCategoryId;
+            _selectIndex = 0;
+            widget.callBack(subCategoryProvide.subCategoryList[0]);
+          }
         }
         return Container(
           height: ScreenUtil.instance.setHeight(80),

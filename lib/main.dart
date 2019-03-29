@@ -3,6 +3,7 @@ import 'pages/MainPage.dart';
 import 'Utils/DioUtils.dart';
 
 import 'provide/MainProvide.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   var providers = Providers();
@@ -27,5 +28,11 @@ class MainApp extends StatelessWidget {
 
   _initApp(BuildContext context) {
     new DioUtils();
+  }
+
+  void checkPermission() async {
+    Map<PermissionGroup, PermissionStatus> permissions =
+        await PermissionHandler().requestPermissions(
+            [PermissionGroup.contacts, PermissionGroup.sensors]);
   }
 }
