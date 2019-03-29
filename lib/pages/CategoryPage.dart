@@ -15,7 +15,7 @@ import 'package:flutter_easyrefresh/easy_refresh.dart';
 
 //目前 没有点击左边，不会默认显示右边的内容。正常的情况下，需要进行加载。目前按偷巧的方式解决。见142行
 
-//考虑 增加统一方法注册回调。
+//考虑 增加统一方法注册回调。【已增加】例子看 MinePage.dart
 
 class CategoryPage extends BasePage {
   RightContent rightContent;
